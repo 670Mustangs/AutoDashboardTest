@@ -48,6 +48,8 @@ class CodeFragment : Fragment() {
                 append("   List.of(\n")
                 GeneratorView.waypoints.forEach {
                     append(
+
+                        
                         "        new Pose2d(${dm.format(it.translation.x)}, " +
                             "${dm.format(it.translation.y)}, " +
                             "Rotation2d.fromDegree(${dm.format(it.rotation.degree)}))"
