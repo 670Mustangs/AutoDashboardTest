@@ -37,6 +37,7 @@ class CodeFragment : Fragment() {
                     .replace("\\s+".toRegex(), "")
 
                 val dm = DecimalFormat("##.###")
+
                 append("TrajectoryConfig config = new TrajectoryConfig(\n")
                 append("${Settings.maxVelocity.value}")
                 append(",")

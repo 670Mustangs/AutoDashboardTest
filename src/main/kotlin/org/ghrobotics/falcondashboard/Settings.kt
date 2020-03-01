@@ -23,6 +23,7 @@ object Settings {
     val reversed = SimpleBooleanProperty(false)
     val optimize = SimpleBooleanProperty(true)
     val autoPathFinding = SimpleBooleanProperty(false)
+    val cubicPath = SimpleBooleanProperty(false) // if false, quintic spline. if true, cubic spline.
     val startVelocity = SimpleDoubleProperty(0.0)
     val endVelocity = SimpleDoubleProperty(0.0)
     val maxVelocity = SimpleDoubleProperty(10.0)
@@ -36,6 +37,7 @@ object Settings {
             value(it.reversed.value)
             value(it.optimize.value)
             value(it.autoPathFinding.value)
+            value(it.cubicPath.value)
             value(it.startVelocity.value)
             value(it.endVelocity.value)
             value(it.maxVelocity.value)
@@ -49,6 +51,7 @@ object Settings {
             Settings.reversed.set(nextBoolean())
             Settings.optimize.set(nextBoolean())
             Settings.autoPathFinding.set(nextBoolean())
+            Settings.cubicPath.set(nextBoolean())
             Settings.startVelocity.set(nextDouble())
             Settings.endVelocity.set(nextDouble())
             Settings.maxVelocity.set(nextDouble())
