@@ -10,6 +10,7 @@ import kfoenix.jfxcheckbox
 import kfoenix.jfxtabpane
 import kfoenix.jfxtextfield
 import org.ghrobotics.falcondashboard.Settings.autoPathFinding
+import org.ghrobotics.falcondashboard.Settings.cubicPath
 import org.ghrobotics.falcondashboard.Settings.endVelocity
 import org.ghrobotics.falcondashboard.Settings.maxAcceleration
 import org.ghrobotics.falcondashboard.Settings.maxCentripetalAcceleration
@@ -60,6 +61,11 @@ class GeneratorView : View() {
                 paddingAll = 5
                 text = "Reversed"
                 bind(reversed)
+            }            
+            jfxcheckbox {
+                paddingAll = 5;
+                text = "Cubic spline"
+                bind(cubicPath)
             }
             jfxcheckbox {
                 paddingAll = 5
